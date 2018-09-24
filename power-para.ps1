@@ -2,18 +2,18 @@
 
 
 #Check to see if the Project folder is available on the local machine
-If(Test-Path C:\terraform\tmp4\powerspeak_terraform) {
+If(Test-Path C:\terraform\tmp4\sss) {
     Write-Host "Powerspeak_terraform repo already exists. Pulling latest changes from remote" -ForegroundColor Green
-    Set-Location -Path C:\terraform\tmp4\powerspeak_terraform
+    Set-Location -Path C:\terraform\tmp4\sss
     git pull 2>$null                                                                #local repository is updated using git clone
 } else {
     Set-Location -Path C:\terraform\tmp4\
     Write-Host "Powerspeak_terraform repo doesn't already exists. Cloning it" -ForegroundColor Green
-    git clone git@bitbucket.org:amey_globant/powerspeak_terraform.git 2>$null       #local repository is created using git clone
+    git clone git@bitbucket.org:fff/sss.git 2>$null       #local repository is created using git clone
 }
 
 # Moving inside powerspeak_terraform Directory
-cd C:\terraform\tmp4\powerspeak_terraform
+cd C:\terraform\tmp4\sss
 
 #branches to be merged in "master branch"
 $branch= [release, hotfix]
