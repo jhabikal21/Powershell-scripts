@@ -29,13 +29,13 @@ If (!$hbranch) {
 #--------------------------Main Program begins------------------------------------------------
 
 #Check to see if the Project folder is available on the local machine
-If(Test-Path C:\Users\sharan.medishetty\$ProjectName) {
+If(Test-Path C:\Users\sharan1\$ProjectName) {
     Write-Host "Powerspeak_terraform repo already exists. Pulling latest changes from remote " -ForegroundColor Green
-    Set-Location -Path C:\Users\sharan.medishetty\$ProjectName
+    Set-Location -Path C:\Users\sharan1\$ProjectName
     git pull 2>$null                    #local repository is updated using git Pull
 
 } else {
-    Set-Location -Path C:\Users\sharan.medishetty\
+    Set-Location -Path C:\Users\sharan1\
     Write-Host "Powerspeak_terraform repo doesn't already exists. Cloning it" -ForegroundColor Green
     git clone $RURL 2>$null       #local repository is created using git clone
 
